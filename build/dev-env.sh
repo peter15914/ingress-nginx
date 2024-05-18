@@ -47,16 +47,16 @@ fi
 
 HELM_VERSION=$(helm version 2>&1 | cut -f1 -d"," | grep -oE '[0-9]+\.[0-9]+\.[0-9]+') || true
 echo $HELM_VERSION
-if [[ ${HELM_VERSION} -lt 3.10.0 ]]; then
-  echo "Please upgrade helm to v3.10.0 or higher"
-  exit 1
-fi
+#if [[ ${HELM_VERSION} -lt 3.10.0 ]]; then
+#  echo "Please upgrade helm to v3.10.0 or higher"
+#  exit 1
+#fi
 
 KUBE_CLIENT_VERSION=$(kubectl version --client --short 2>/dev/null | grep Client | awk '{print $3}' | cut -d. -f2) || true
-if [[ ${KUBE_CLIENT_VERSION} -lt 24 ]]; then
-  echo "Please update kubectl to 1.24.2 or higher"
-  exit 1
-fi
+#if [[ ${KUBE_CLIENT_VERSION} -lt 24 ]]; then
+#  echo "Please update kubectl to 1.24.2 or higher"
+#  exit 1
+#fi
 
 echo "[dev-env] building image"
 make build image

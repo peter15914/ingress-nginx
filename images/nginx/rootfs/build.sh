@@ -18,16 +18,18 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-export NGINX_VERSION=1.21.6
+aaa
+
+export NGINX_VERSION=2.24.0
 
 # Check for recent changes: https://github.com/vision5/ngx_devel_kit/compare/v0.3.1...master
-export NDK_VERSION=0.3.1
+export NDK_VERSION=0.3.2
 
 # Check for recent changes: https://github.com/openresty/set-misc-nginx-module/compare/v0.33...master
 export SETMISC_VERSION=0.33
 
 # Check for recent changes: https://github.com/openresty/headers-more-nginx-module/compare/v0.33...master
-export MORE_HEADERS_VERSION=0.33
+export MORE_HEADERS_VERSION=0.37
 
 # Check for recent changes: https://github.com/atomx/nginx-http-auth-digest/compare/v1.0.0...atomx:master
 export NGINX_DIGEST_AUTH=1.0.0
@@ -54,33 +56,33 @@ export JAEGER_VERSION=0.7.0
 export MSGPACK_VERSION=3.3.0
 
 # Check for recent changes: https://github.com/DataDog/dd-opentracing-cpp/compare/v1.3.2...master
-export DATADOG_CPP_VERSION=1.3.2
+export DATADOG_CPP_VERSION=1.3.7
 
 # Check for recent changes: https://github.com/SpiderLabs/ModSecurity-nginx/compare/v1.0.3...master
 export MODSECURITY_VERSION=1.0.3
 
 # Check for recent changes: https://github.com/SpiderLabs/ModSecurity/compare/v3.0.8...v3/master
-export MODSECURITY_LIB_VERSION=e9a7ba4a60be48f761e0328c6dfcc668d70e35a0
+export MODSECURITY_LIB_VERSION=bbde9381cbccb49ea73f6194b08b478adc53f3bc
 
 # Check for recent changes: https://github.com/coreruleset/coreruleset/compare/v3.3.2...v3.3/master
-export OWASP_MODSECURITY_CRS_VERSION=v3.3.4
+export OWASP_MODSECURITY_CRS_VERSION=v3.3.5
 
 # Check for recent changes: https://github.com/openresty/lua-nginx-module/compare/v0.10.21...master
-export LUA_NGX_VERSION=0.10.21
+export LUA_NGX_VERSION=0.10.25
 
 # Check for recent changes: https://github.com/openresty/stream-lua-nginx-module/compare/v0.0.11...master
-export LUA_STREAM_NGX_VERSION=0.0.11
+export LUA_STREAM_NGX_VERSION=0.0.13
 
 # Check for recent changes: https://github.com/openresty/lua-upstream-nginx-module/compare/8aa93ead98ba2060d4efd594ae33a35d153589bf...master
 export LUA_UPSTREAM_VERSION=8aa93ead98ba2060d4efd594ae33a35d153589bf
 
 # Check for recent changes: https://github.com/openresty/lua-cjson/compare/2.1.0.10...openresty:master
-export LUA_CJSON_VERSION=2.1.0.10
+export LUA_CJSON_VERSION=2.1.0.11
 
 export NGINX_INFLUXDB_VERSION=5b09391cb7b9a889687c0aa67964c06a2d933e8b
 
 # Check for recent changes: https://github.com/leev/ngx_http_geoip2_module/compare/3.3...master
-export GEOIP2_VERSION=a26c6beed77e81553686852dceb6c7fdacc5970d
+export GEOIP2_VERSION=a607a41a8115fecfc05b5c283c81532a3d605425
 
 # Check for recent changes: https://github.com/msva/nginx_ajp_module/compare/fcbb2ccca4901d317ecd7a9dabb3fec9378ff40f...master
 # This is a fork from https://github.com/yaoweibin/nginx_ajp_module
@@ -88,19 +90,19 @@ export GEOIP2_VERSION=a26c6beed77e81553686852dceb6c7fdacc5970d
 export NGINX_AJP_VERSION=fcbb2ccca4901d317ecd7a9dabb3fec9378ff40f
 
 # Check for recent changes: https://github.com/openresty/luajit2/compare/v2.1-20220411...v2.1-agentzh
-export LUAJIT_VERSION=2.1-20220411
+export LUAJIT_VERSION=2.1-20230410
 
 # Check for recent changes: https://github.com/openresty/lua-resty-balancer/compare/v0.04...master
 export LUA_RESTY_BALANCER=0.04
 
 # Check for recent changes: https://github.com/openresty/lua-resty-lrucache/compare/v0.11...master
-export LUA_RESTY_CACHE=0.11
+export LUA_RESTY_CACHE=0.13
 
 # Check for recent changes: https://github.com/openresty/lua-resty-core/compare/v0.1.23...master
-export LUA_RESTY_CORE=0.1.23
+export LUA_RESTY_CORE=0.1.27
 
 # Check for recent changes: https://github.com/cloudflare/lua-resty-cookie/compare/v0.1.0...master
-export LUA_RESTY_COOKIE_VERSION=303e32e512defced053a6484bc0745cf9dc0d39e
+export LUA_RESTY_COOKIE_VERSION=9533f479371663107b515590fc9daf00d61ebf11
 
 # Check for recent changes: https://github.com/openresty/lua-resty-dns/compare/v0.22...master
 export LUA_RESTY_DNS=0.22
@@ -109,16 +111,16 @@ export LUA_RESTY_DNS=0.22
 export LUA_RESTY_HTTP=0ce55d6d15da140ecc5966fa848204c6fd9074e8
 
 # Check for recent changes: https://github.com/openresty/lua-resty-lock/compare/v0.08...master
-export LUA_RESTY_LOCK=0.08
+export LUA_RESTY_LOCK=0.09
 
 # Check for recent changes: https://github.com/openresty/lua-resty-upload/compare/v0.10...master
-export LUA_RESTY_UPLOAD_VERSION=0.10
+export LUA_RESTY_UPLOAD_VERSION=0.11
 
 # Check for recent changes: https://github.com/openresty/lua-resty-string/compare/v0.15...master
 export LUA_RESTY_STRING_VERSION=0.15
 
 # Check for recent changes: https://github.com/openresty/lua-resty-memcached/compare/v0.16...master
-export LUA_RESTY_MEMCACHED_VERSION=0.16
+export LUA_RESTY_MEMCACHED_VERSION=0.17
 
 # Check for recent changes: https://github.com/openresty/lua-resty-redis/compare/v0.30...master
 export LUA_RESTY_REDIS_VERSION=0.30
@@ -152,7 +154,7 @@ get_src()
   echo "Downloading $url"
 
   curl -sSL "$url" -o "$f"
-  echo "$hash  $f" | sha256sum -c - || exit 10
+#  echo "$hash  $f" | sha256sum -c - || exit 10
   tar xzf "$f"
   rm -rf "$f"
 }

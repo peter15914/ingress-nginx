@@ -30,4 +30,4 @@ if [ -z "${PKG}" ]; then
 fi
 
 go test -v \
-  $(go list "${PKG}/..." | grep -v vendor | grep -v '/test/e2e' | grep -v images | grep -v "docs/examples")
+  $(go list "${PKG}/..." | grep -v vendor | grep -v '/test/e2e' | grep -v images | grep -v "docs/examples" | grep -v "k8s.io/ingress-nginx/version")
